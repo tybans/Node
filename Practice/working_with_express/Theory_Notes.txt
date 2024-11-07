@@ -1,0 +1,35 @@
+Express
+    - Server Logic is complex
+    - Use a framework for the heavy lifting!
+        Framework:- Helper functions, tools & rules that help you build your application
+    - Install another package that can easily be hooked into our project that will then do the parsing
+    - Express.js, we use it as a production dependency ==> npm install --save express
+
+Express Middleware
+    - Express.js is all about middleware
+    - Middleware means that an incoming request is automaticlly funneled through a bunch of functions by express.js. So instead of having one request handler, you will actually have a possibility of hooking in multiple functions which the request will go through until you send a response.
+    - This allows to split the code into multiple blocks or pieces instead of having one huge function
+
+    - app.use(): A Middleware
+        - It allows us to add a new middleware function, it is pretty flexible.
+        - It accepts an array of request handlers, and it has some other use cases too
+
+
+
+Middleware
+The function which we pass to app.use() will be executed for every incoming request and this function will receive three arguments.
+
+next is actually a function. A function that will be passed to this function by express.js
+This next argument as a function has to be executed to allow the request to travel on to the next middleware
+We have to call next() at the top middleware to allow the request to travel on to the next middleware in line. Basically it goes from top to bottom
+
+app.use((req, res, next) => {
+    console.log('In the middleware');
+    next()  // Allows the rquest to continue to the next middleware in Line
+    
+} )
+app.use((req, res, next) => {
+    console.log('In another middleware');
+    res.send('<h1>Hello from Express</h1')   //Send allows us to send a response, allows us to attach a body which is of type any
+    
+} )

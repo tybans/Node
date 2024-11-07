@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "name": "working_with_express",
+  "version": "1.0.0",
+  "description": "express practice",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Taiyab Ansari",
+  "license": "ISC"
+}

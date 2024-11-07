@@ -1,0 +1,73 @@
+Node.js
+    -A JavaScript runtime.
+    -JavaScript , a programming language we use in the browser to manipulate the DOM. It is a language that runs in the browser that allows you to interact with the page.
+    -Node.js takes JavaScript and puts it into different environment.
+    -It allows you to run JavaScript code on the server or any machine.
+    -This means we can use Node.js to run JavaScript outside of the browser.
+
+    -Node.js uses v8 and v8 is the name of the JavaScript engine built by Google that runs JavaScript in the browser.
+    -The engine takes JavaScript code, the code running in your browser then or in Node's case which builds up on v8 also the Node.js JavaScript code, it takes that JavaScript code and compiles it to machine code.
+    -v8 itself is written in C++
+
+    -Node.js basically takes that v8 codebase which is written in C++ and adds certain features like for example working with your local file system, opening files, reading files, deleting files, these are all things which are not possible in the browser.
+
+
+The REPL
+    -REPL stands for:
+        READ  --> Read User Input
+        EVAL  --> Evaluate User Input
+        PRINT --> Print Output (Result)
+        LOOP  --> Wait for new Input
+    REPL is what we use, if we just type Node into terminal.
+
+
+How does the Web work?
+
+
+Request and Response transmission is done through some protocol
+    - http, https, express
+
+
+Core Modules
+    - http - Launch a server, send requests
+    -https - Launch a SSL server
+    -fs, 
+    -path, 
+    -os
+
+require()
+    - A keyword
+    -import files in node.js
+    -either takes a path to another file or imports a core module
+
+
+Streams and Buffers
+    
+
+[MODULE SUMMARY]
+    How the web works:
+        Client => Request => Server => Response => Client
+    
+    Program Lifecycle & Event Loop
+        Node.js runs non-blocking JS code and uses an event-driven code ("Event Loop") for running your logic.
+        A Node Program exits as soon as there is no more work to do.
+        Note: The createServer() event never finishes by default.
+    
+    Asynchronous Code 
+        JS code is non-blocking
+        Use callbacks and events => Order changes!
+
+    Requests & Responses
+        Parse request data in chunks (Streams & Buffers)
+        Avoid "double responses"
+
+    Node.js & Core Modules
+        Node.js ships with multiple core modules (http, fs, path, ...)
+        Core modules can be imported into any file to be used there
+        Import via require('module')
+    
+    The Node Module System
+        Import via require('./path-to-file') for custom files or require('module') for core & third-party modules
+        Export via module.exports or just exports (for multiple exports)
+
+
