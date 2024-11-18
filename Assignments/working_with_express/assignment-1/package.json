@@ -1,19 +1,18 @@
 {
-  "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.1"
-  },
   "name": "working_with_express",
   "version": "1.0.0",
-  "description": "express practice",
+  "description": "basic express assignment",
   "main": "app.js",
-  "devDependencies": {
-    "nodemon": "^3.1.7"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
   "author": "Taiyab Ansari",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }

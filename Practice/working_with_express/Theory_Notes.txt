@@ -33,3 +33,8 @@ app.use((req, res, next) => {
     res.send('<h1>Hello from Express</h1')   //Send allows us to send a response, allows us to attach a body which is of type any
     
 } )
+
+Serve files Statically
+    Not handled by the express router or other middleware but instead directly forwarded to the file system
+    app.use(express.static(path.join(__dirname, 'public')))
+    To access the static files, a folder which you want to grant a read access to
