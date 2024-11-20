@@ -1,0 +1,18 @@
+-Managing Data (without a Database)
+-Render dynamic content in our views
+-Understanding Templating Engines
+
+Templating Engines
+    EJS     ==> <p><%= name %></p>
+            ==> Use normal HTML and plain JavaScript in your templates
+            ==> EJS does not suport layout
+                (layout)- Some code block to reuse
+
+    Pug (Jade)  ==> p #{name}
+                ==> Use minimal HTML and custom template language
+
+    Handlebars  ==> <p>{{name}}</p>
+                ==> Use normal HTML and custom template language
+                ==> npm install --save express-handlebars@3.0
+
+    npm install --save ejs pug express-handlebars
