@@ -6,7 +6,10 @@ Templating Engines
     EJS     ==> <p><%= name %></p>
             ==> Use normal HTML and plain JavaScript in your templates
             ==> EJS does not suport layout
-                (layout)- Some code block to reuse
+                    (layout)- Some code block to reuse
+            ==> Partial or include features
+            ==> Instead of having one master layout, you have a couple of separated shared view parts which you can merge into the view
+            ==> Since we are using EJS, we don't need to use layout folder
 
     Pug (Jade)  ==> p #{name}
                 ==> Use minimal HTML and custom template language
