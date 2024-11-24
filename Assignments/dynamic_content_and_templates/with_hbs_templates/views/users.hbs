@@ -1,0 +1,14 @@
+<h1>Users</h1>
+
+{{!-- HandleBars doesn't support this kind of code block --}}
+{{!-- {{#if users.length > 0}} --}}
+
+{{#if hasUsers}}
+    <ul>
+        {{#each users}}
+            <li>{{this.name}}</li>
+        {{/each}}
+    </ul>
+{{else}}
+    <h1>No Users Found!</h1>
+{{/if}}
