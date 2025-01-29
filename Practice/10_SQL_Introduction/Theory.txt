@@ -1,0 +1,36 @@
+SQL vs NoSQL
+  Goal: Store data and make it easily accessible. It has quicker access than with a file
+  Use a database: SQL database(e.g. MySQL) or NoSQL database(e.g. MongoDB)
+
+
+What is SQL (Structured Query Language)
+  - SQL thinks in tables.
+  - Allow to relate different tables
+  - Strong Data Schema
+  - Data Relations: One to One, One to Many, Many to Many
+  - Data is distributed across multiple tables
+  - Horizontal Scaling is difficult/impossible; Vertical Scaling is possible
+  - Limitations for lots of (thousands) read & write queries per second
+
+SQL Queries
+  SELECT * FROM users WHERE age > 28
+
+
+
+NoSQL
+  - Database --> Collections --> Documents --> JavaScript Object
+  - Schema-less
+  - Data is typically merged / nested in a few collections
+  - No Relations instead we go for duplicate data
+  - Both Horizontal and Vertical Scaling is possible
+  - Great performance for mass read & write requests
+
+
+Horizontal vs Vertical Scaling
+
+  Horizontal:
+    We add more servers infintely and connect them to our database and split our data across all these servers
+
+  
+  Vertical: 
+    We make our existing server stronger by adding more CPU or memory, but have some limit
