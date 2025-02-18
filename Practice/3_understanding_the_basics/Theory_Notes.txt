@@ -25,10 +25,90 @@ How does the Web work?
 
 
 Request and Response transmission is done through some protocol
-    - http, https, express
+    - http(Hyper Text Transfer Protocol) - A protocol for transferring data which is understood by browser and server.
+    - https(Secure) - HTTP + Data Encryption (during Transmission).
+    - express
 
 
-Core Modules
+Core Modules:
+
+    what are core modules in nodejs?
+        Core modules in Node.js are built-in modules that come with the Node.js runtime. These modules provide essential functionalities without needing to install additional packages. You can load them using the require() function (CommonJS) or import (ES Modules).
+
+        Common Core Modules in Node.js
+        File System (fs) - Handles file operations (read, write, delete, etc.).
+        const fs = require('fs');
+        fs.writeFileSync('test.txt', 'Hello, Node.js!');
+
+        Path (path) - Helps work with file and directory paths.
+        const path = require('path');
+        console.log(path.join(__dirname, 'file.txt'));
+
+        HTTP (http) - Creates HTTP servers and handles requests.
+        const http = require('http');
+        http.createServer((req, res) => {
+            res.write('Hello, World!');
+            res.end();
+        }).listen(3000);
+
+        HTTPS (https) - Manages secure HTTP communication (SSL/TLS).
+        const https = require('https');
+        https.get('https://jsonplaceholder.typicode.com/todos/1', (res) => {
+            res.on('data', (chunk) => console.log(chunk.toString()));
+        });
+
+        Events (events) - Implements event-driven programming.
+        const EventEmitter = require('events');
+        const emitter = new EventEmitter();
+        emitter.on('greet', () => console.log('Hello, Event!'));
+        emitter.emit('greet');
+
+        Stream (stream) - Handles streaming data (e.g., reading large files).
+        const fs = require('fs');
+        const readStream = fs.createReadStream('largeFile.txt');
+        readStream.on('data', (chunk) => console.log(chunk.toString()));
+
+        Buffer (buffer) - Works with binary data efficiently.
+        const buf = Buffer.from('Hello');
+        console.log(buf.toString());
+
+        Crypto (crypto) - Provides cryptographic functions.
+        const crypto = require('crypto');
+        console.log(crypto.randomBytes(16).toString('hex'));
+
+        OS (os) - Provides OS-related information.
+        const os = require('os');
+        console.log(os.platform(), os.totalmem());
+
+        Child Process (child_process) - Runs system commands or scripts.
+        const { exec } = require('child_process');
+        exec('ls', (err, stdout) => console.log(stdout));
+
+        Process (process) - Accesses process-related information.
+        console.log(process.cwd()); // Current working directory
+        console.log(process.env.NODE_ENV); // Environment variables
+
+        Util (util) - Provides utility functions.
+        const util = require('util');
+        const sleep = util.promisify(setTimeout);
+        sleep(1000).then(() => console.log('1 second passed'));
+
+        Timers (timers) - Handles timing-related operations.
+        setTimeout(() => console.log('After 2 seconds'), 2000);
+
+        Cluster (cluster) - Enables multi-threading for scaling applications.
+        const cluster = require('cluster');
+        if (cluster.isMaster) {
+            cluster.fork();
+        } else {
+            console.log('Worker process running');
+        }
+        
+        Key Benefits of Core Modules
+        - No need for external dependencies.
+        - High performance and well-optimized.
+        - Secure and maintained by the Node.js team.
+
     - http - Launch a server, send requests
     -https - Launch a SSL server
     -fs, 
